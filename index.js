@@ -95,7 +95,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
         bot.sendMessage ({
             to:"446481883346501652",
             "embed": {
-              "color":16570605,
+              "color":15105570,
               "url": "https://discordapp.com",
               "timestamp": new Date().toISOString(),
               "footer": {

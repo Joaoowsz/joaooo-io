@@ -184,16 +184,9 @@ bot.on("message", function(user, userID, channelID, message, event) {
                   to: "446481430416195594",
                     "embed": {
                       "color":15105570,
-                "url": "https://discordapp.com",
-                "footer": {
-                "fields": [
-                  {
-                    "name": "Cargos do Discord:",
-                    "value": "Criador da lei 👑 - 446476709898878976\nDiscord Developer 🤖 - 447459438081605653",
-                  }
-                ]
-              }
-            }
-          })
-        }
-      })
+                      "title": "Cargos do Discord",
+                      "description": "Criador da lei 👑 - 446476709898878976\nDiscord Developer 🤖 - 447459438081605653",
+                    }
+                  })
+                }
+              })

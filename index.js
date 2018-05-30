@@ -126,7 +126,6 @@ bot.on("message", function(user, userID, channelID, message, event) {
         })
   
           bot.sendMessage ({
-              to:"451375466885021706",
               "embed": {
                 "color":15105570,
                 "url": "https://discordapp.com",

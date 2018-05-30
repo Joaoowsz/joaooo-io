@@ -120,11 +120,6 @@ bot.on("message", function(user, userID, channelID, message, event) {
 
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {
-        bot.sendMessage({
-          to:"451375466885021706",
-          message: "",
-        })
-  
           bot.sendMessage ({
               "embed": {
                 "color":15105570,

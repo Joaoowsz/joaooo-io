@@ -174,7 +174,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
       })
 
           bot.on("message", function(user, userID, channelID, message, event) {
-            if(message.startsWith("/")) {
+            if(message.startsWith("/roles")) {
               bot.sendMessage({
                 to: "446481430416195594",
                 message: "",
@@ -189,7 +189,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 "fields": [
                   {
                     "name": "Cargos do Discord:",
-                    "value": "",
+                    "value": "Criador da lei 👑 - 446476709898878976" + "\nDiscord Developer 🤖 - 447459438081605653" + "\n ",
                   }
                 ]
               }

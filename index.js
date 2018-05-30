@@ -4,6 +4,7 @@ var bot = new Discord.Client({
     token: "NDQ3NDU3MTU4NjE2MDU1ODA4.DeH2fg.buW9mjs8wkthmJnB-CWn5ZOAnwU",
     autorun: true
 });
+
 //Discord.Colors = {
 //    DEFAULT: 0,
 //    AQUA: 1752220,

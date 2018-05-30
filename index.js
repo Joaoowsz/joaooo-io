@@ -32,7 +32,7 @@ bot.on('ready', function() {
     console.log('Logged in as %s - %s\n', bot.username, bot.id);
     bot.setPresence({
         game: {
-        name: "@Joaoowsz",
+        name: "o pinto no ninja",
         type: 1,
         }
     });
@@ -62,7 +62,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
             }, 1000)
             let member = bot.servers[bot.channels[channelID].guild_id].members[event.d.mentions[0].id];
             bot.sendMessage({
-              to: "447413489460314134",
+              to: "446495398182256650",
               embed: {
                 color: 1752220,
                 description: "**• Comando por:** <@" + userID + ">" + "\n**• Comando:** /kick" + "\n**• Player kickado**: " + member.username + "\n**• Motivo:** " + matches[2]
@@ -75,9 +75,9 @@ bot.on("message", function(user, userID, channelID, message, event) {
        bot.on("guildMemberAdd", function(member, user, userID, channelID, message, event) {
         var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
            bot.sendMessage({
-               to:'446476615053213699',
+               to:'446495398182256650',
                embed: {
-                   description: "Olá <@" + member.id +">, seja bem-vindo ao servidor de testes!" + "\nIP: loth.us" + "\nTwitter: https://twitter.com/Joaoowsz", 
+                   description: "Olá <@" + member.id +">, seja bem-vindo ao World Ninja!" + "\nMeu patrão: https://twitter.com/ninjablessed" + "\nMeu desenvolvedor: https://twitter.com/Joaoowsz", 
                    color: 3066993,
                     "icon_url": avatar,
                    },
@@ -87,13 +87,13 @@ bot.on("message", function(user, userID, channelID, message, event) {
 bot.on("message", function(user, userID, channelID, message, event) {
     if(message.startsWith("/anunciar")) {
       bot.sendMessage({
-        to:"450432587849269269",
+        to:"446481883346501652",
         message: "@everyone",
       })
         var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
 
         bot.sendMessage ({
-            channelID:"450432587849269269",
+            channelID:"446481883346501652",
                 "embed": {
                   "color": 1752220,
                   "timestamp": new Date().toISOString(),
@@ -120,13 +120,13 @@ bot.on("message", function(user, userID, channelID, message, event) {
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/changelog")) {
         bot.sendMessage({
-          to:"450432587849269269",
+          to:"447462040529797131",
           message: "@everyone",
         })
           var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
   
           bot.sendMessage ({
-              channelID:"450432587849269269",
+              channelID:"447462040529797131",
                   "embed": {
                     "color": 1752220,
                     "timestamp": new Date().toISOString(),
@@ -136,7 +136,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
                     },
                     "fields": [
                       {
-                        "name": "Joao.io - Changelog",
+                        "name": "World Ninja - Changelog",
                         "value": message.slice(10)
                       }
                     ]
@@ -153,7 +153,12 @@ bot.on("message", function(user, userID, channelID, message, event) {
       bot.on("message", function(user, userID, channelID, message, event) {
         if(message.startsWith("/PintoDoThor")) {
           bot.sendMessage({
+            channelID: "446481280373227534",
             message: "https://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\n",
           })
         }
+      })
+      bot.deleteMessage({
+        channelID: channelID,
+        messageID: event.d.id,
       })

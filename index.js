@@ -121,12 +121,12 @@ bot.on("message", function(user, userID, channelID, message, event) {
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {
         bot.sendMessage({
-          to: "446704301004423178",
+          to: "446481430416195594",
           message: "",
         })
   
           bot.sendMessage ({
-            to: "446704301004423178",
+            to: "446481430416195594",
               "embed": {
                 "color":15105570,
                 "url": "https://discordapp.com",
@@ -171,4 +171,29 @@ bot.on("message", function(user, userID, channelID, message, event) {
                   messageID: event.d.id,
                 })
           }
+      })
+
+          bot.on("message", function(user, userID, channelID, message, event) {
+            if(message.startsWith("/")) {
+              bot.sendMessage({
+                to: "446481430416195594",
+                message: "",
+              })
+        
+                bot.sendMessage ({
+                  to: "446481430416195594",
+                    "embed": {
+                      "color":15105570,
+                "url": "https://discordapp.com",
+                "footer": {
+                "fields": [
+                  {
+                    "name": "Cargos do Discord:",
+                    "value": "",
+                  }
+                ]
+              }
+            }
+          })
+        }
       })

@@ -94,21 +94,24 @@ bot.on("message", function(user, userID, channelID, message, event) {
 
         bot.sendMessage ({
             channelID:"446481883346501652",
-                "embed": {
-                  "color": 1752220,
-                  "timestamp": new Date().toISOString(),
-                  "footer": {
-                    "icon_url": avatar,
-                    "text": "Enviado por: " + user
-                  },
-                  "fields": [
-                    {
-                      "name": "📢 Anúncio",
-                      "value": message.slice(10)
-                    }
-                  ]
+            "embed": {
+              "color": 16570605,
+              "timestamp": new Date().toISOString(),
+              "footer": {
+                "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+                "text": "Enviado por:" + user
+              },
+              "thumbnail": {
+                "url": "https://cdn.discordapp.com/embed/avatars/0.png"
+              },
+              "fields": [
+                {
+                  "name": "📢 Anúncio",
+                  "value": message.slice(10)
                 }
-            })
+              ]
+            }
+          })
 
             bot.deleteMessage({
                 channelID: channelID,
@@ -148,17 +151,4 @@ bot.on("message", function(user, userID, channelID, message, event) {
                   messageID: event.d.id,
                 })
           }
-      })
-
-      bot.on("message", function(user, userID, channelID, message, event) {
-        if(message.startsWith("/PintoDoThor")) {
-          bot.sendMessage({
-            channelID: "446481280373227534",
-            message: "https://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\n",
-          })
-        }
-      })
-      bot.deleteMessage({
-        channelID: channelID,
-        messageID: event.d.id,
       })

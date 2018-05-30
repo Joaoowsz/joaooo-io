@@ -85,7 +85,8 @@ bot.on("message", function(user, userID, channelID, message, event) {
     });
 
 bot.on("message", function(user, userID, channelID, message, event) {
-    if(message.startsWith("/anunciar")) {
+  if(message.startsWith("/anunciar")) {
+  if(bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("447459438081605653")) {
       bot.sendMessage({
         to:"446481883346501652",
         message: "@everyone",
@@ -106,17 +107,17 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 {
                   "name": "📢 Anúncio",
                   "value": message.slice(10)
-                }
-              ]
-            }
-          })
-
+                 }
+                ]
+              }
+            })
             bot.deleteMessage({
-                channelID: channelID,
-                messageID: event.d.id,
-              })
+              channelID: channelID,
+              messageID: event.d.id,
+            })
+          }
         }
-    })     
+      })
 
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {

@@ -117,3 +117,32 @@ bot.on("message", function(user, userID, channelID, message, event) {
               })
         }
     })
+
+    bot.on("message", function(user, userID, channelID, message, event) {
+      if(message.startsWith("/status")) {
+        bot.sendMessage({
+          "embed": {
+            "color":15105570,
+            "url": "https://discordapp.com",
+            "timestamp": new Date().toISOString(),
+            "footer": {
+              "icon_url": avatar,
+              "text": "Enviado por: " + user
+            },
+            "fields": [
+              {
+                "name": "Nome do servidor:",
+                "value": "World Ninja",
+                "inline": true
+              },
+              {
+                "name": "Criador do servidor:",
+                "value": "<@227809283239182336>",
+                "inline": true
+              }
+            
+            ]
+          }
+        })
+      }
+    })

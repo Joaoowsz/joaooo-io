@@ -122,12 +122,20 @@ bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {
         bot.sendMessage({
           "embed": {
-            "color":15105570,
             "url": "https://discordapp.com",
+            "color": 8884168,
             "timestamp": new Date().toISOString(),
             "footer": {
-              "icon_url": avatar,
-              "text": "Enviado por: " + user
+              "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+              "text": "Enviado por: "
+            },
+            "thumbnail": {
+              "url": ""
+            },
+            "author": {
+              "name": "Informações do servidor",
+        
+              "icon_url": "https://cdn.discordapp.com/attachments/451375466885021706/451386682034487296/download.png"
             },
             "fields": [
               {
@@ -140,9 +148,8 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 "value": "<@227809283239182336>",
                 "inline": true
               }
-            
             ]
           }
         })
       }
-    })
+    })        

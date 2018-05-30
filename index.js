@@ -84,71 +84,18 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 })
     });
 
-bot.on("message", function(user, userID, channelID, message, event) {
-    if(message.startsWith("/anunciar")) {
-      bot.sendMessage({
-        to:"446481883346501652",
-        message: "@everyone",
-      })
-        var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
-
-        bot.sendMessage ({
-            channelID:"446481883346501652",
-            "embed": {
-              "color": 16570605,
-              "timestamp": new Date().toISOString(),
-              "footer": {
-                "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-                "text": "Enviado por:" + user
-              },
-              "thumbnail": {
-                "url": "https://cdn.discordapp.com/embed/avatars/0.png"
-              },
-              "fields": [
-                {
-                  "name": "📢 Anúncio",
-                  "value": message.slice(10)
-                }
-              ]
-            }
-          })
-
-            bot.deleteMessage({
-                channelID: channelID,
-                messageID: event.d.id,
-              })
+    bot.on("guildMemberAdd", function(member, user, userID, channelID, message, event) {
+      if(message.startsWith("/anunciar")){
+        bot.sendMessage("@everyone")
+        to: "446481883346501652"
+        serverID: "446476615053213697"
+        embed: {
+          fields: [
+            {
+              name: "Anúncio",
+              value: message.slice(10)
+            },
+          ]
         }
+      }
     })
-
-    bot.on("message", function(user, userID, channelID, message, event) {
-      if(message.startsWith("/changelog")) {
-        bot.sendMessage({
-          to:"447462040529797131",
-          message: "@everyone",
-        })
-          var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
-  
-          bot.sendMessage ({
-              channelID:"447462040529797131",
-                  "embed": {
-                    "color": 1752220,
-                    "timestamp": new Date().toISOString(),
-                    "footer": {
-                      "icon_url": avatar,
-                      "text": "Enviado por: " + user
-                    },
-                    "fields": [
-                      {
-                        "name": "World Ninja - Changelog",
-                        "value": message.slice(10)
-                      }
-                    ]
-                  }
-              })
-  
-              bot.deleteMessage({
-                  channelID: channelID,
-                  messageID: event.d.id,
-                })
-          }
-      })

@@ -185,7 +185,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
                     "embed": {
                       "color":15105570,
                       "title": "Cargos do Discord",
-                      "description": "Criador da lei 👑 - 446476709898878976\nDiscord Developer 🤖 - 447459438081605653",
+                      "description": "**EM DESENVOLVIMENTO**\nCriador da lei 👑 - ID: 446476709898878976\nDiscord Developer 🤖 - ID: 447459438081605653\n",
                     }
                   })
                 }

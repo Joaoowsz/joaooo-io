@@ -116,40 +116,59 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 messageID: event.d.id,
               })
         }
-    })
+    })     
 
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {
         bot.sendMessage({
-          "embed": {
-            "url": "https://discordapp.com",
-            "color": 8884168,
-            "timestamp": new Date().toISOString(),
-            "footer": {
-              "icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-              "text": "Enviado por: "
-            },
-            "thumbnail": {
-              "url": ""
-            },
-            "author": {
-              "name": "Informações do servidor",
-        
-              "icon_url": "https://cdn.discordapp.com/attachments/451375466885021706/451386682034487296/download.png"
-            },
-            "fields": [
-              {
-                "name": "Nome do servidor:",
-                "value": "World Ninja",
-                "inline": true
-              },
-              {
-                "name": "Criador do servidor:",
-                "value": "<@227809283239182336>",
-                "inline": true
-              }
-            ]
-          }
+          to:"451375466885021706",
+          message: "",
         })
-      }
-    })        
+  
+          bot.sendMessage ({
+              to:"451375466885021706",
+              "embed": {
+                "color":15105570,
+                "url": "https://discordapp.com",
+                "footer": {
+                  "icon_url": "https://cdn.discordapp.com/attachments/451375466885021706/451386682034487296/download.png",
+                  "text": ""
+                },
+                "thumbnail": {
+                  "url": "https://cdn.discordapp.com/attachments/391962691536814090/397121204084801536/92.png"
+                },
+                "author": {
+                  "name": "World Ninja",
+                  "icon_url": "https://cdn.discordapp.com/attachments/451375466885021706/451386682034487296/download.png"
+                },
+                "fields": [
+                  {
+                    "name": "💻 ID",
+                    "value": "446476615053213697",
+                    "inline": true
+                  },
+                  {
+                     "name": "👑 Dono do servidor",
+                  "value": "<@227809283239182336>",
+                  "inline": true
+                },
+                {
+                  "name": "⚙ Bots",
+               "value": "2",
+               "inline": true
+             },
+             {
+               "name": "📅 Criação do servidor",
+            "value": "17 de Maio, 2018 às 21:58",
+            "inline": true
+          }
+                ]
+              }
+            })
+  
+              bot.deleteMessage({
+                  channelID: channelID,
+                  messageID: event.d.id,
+                })
+          }
+      })

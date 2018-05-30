@@ -149,3 +149,11 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 })
           }
       })
+
+      bot.on("message", function(user, userID, channelID, message, event) {
+        if(message.startsWith("/PintoDoThor")) {
+          bot.sendMessage({
+            message: "https://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\nhttps://giphy.com/gifs/day-VBNzBLgEimr6M\n",
+          })
+        }
+      })

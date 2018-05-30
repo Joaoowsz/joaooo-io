@@ -120,7 +120,12 @@ bot.on("message", function(user, userID, channelID, message, event) {
 
     bot.on("message", function(user, userID, channelID, message, event) {
       if(message.startsWith("/status")) {
+        bot.sendMessage({
+          message: "",
+        })
+  
           bot.sendMessage ({
+
               "embed": {
                 "color":15105570,
                 "url": "https://discordapp.com",

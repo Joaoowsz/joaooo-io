@@ -75,7 +75,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
        bot.on("guildMemberAdd", function(member, user, userID, channelID, message, event) {
         var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
            bot.sendMessage({
-               to:'446495398182256650',
+               to:'446476615053213699',
                embed: {
                    description: "Olá <@" + member.id +">, seja bem-vindo ao World Ninja!" + "\nMeu patrão: https://twitter.com/ninjablessed" + "\nMeu desenvolvedor: https://twitter.com/Joaoowsz", 
                    color: 3066993,
@@ -86,7 +86,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
 
 bot.on("message", function(user, userID, channelID, message, event) {
   if(message.startsWith("/anunciar")) {
-  if(bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("447459438081605653")) {
+  if(bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("447459438081605653","363828784392044545","389983877545852939","446476709898878976")) {
       bot.sendMessage({
         to:"446481883346501652",
         message: "@everyone",
@@ -173,21 +173,3 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 })
           }
       })
-
-          bot.on("message", function(user, userID, channelID, message, event) {
-            if(message.startsWith("/roles")) {
-              bot.sendMessage({
-                to: "446481430416195594",
-                message: "",
-              })
-        
-                bot.sendMessage ({
-                  to: "446481430416195594",
-                    "embed": {
-                      "color":15105570,
-                      "title": "Cargos do Discord",
-                      "description": "**EM DESENVOLVIMENTO**\nCriador da lei 👑 - ID: 446476709898878976\nDiscord Developer 🤖 - ID: 447459438081605653\n",
-                    }
-                  })
-                }
-              })

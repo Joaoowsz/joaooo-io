@@ -63,14 +63,15 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 ]
               }
           })
-        }
 
           bot.deleteMessage({
               channelID: channelID,
               messageID: event.d.id,
             })
       }
+    }
   })
+
 
   bot.on("guildMemberAdd", function(member, user, userID, channelID, message, event) {
     bot.sendMessage({

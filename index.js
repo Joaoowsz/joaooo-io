@@ -40,6 +40,7 @@ bot.on('ready', function() {
 
 bot.on("message", function(user, userID, channelID, message, event) {
   if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("434854904771772427","432707857884905477")) {
+  }
   if(message.startsWith("/anunciar")) {
       var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
       bot.sendMessage({
@@ -69,7 +70,6 @@ bot.on("message", function(user, userID, channelID, message, event) {
               messageID: event.d.id,
             })
       }
-    }
   })
 
 
@@ -86,7 +86,8 @@ bot.on("message", function(user, userID, channelID, message, event) {
 });
 
 bot.on("message", function(user, userID, channelID, message, event) {
-  if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("&227809283239182336","&432707857884905477")) {
+  if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("227809283239182336","432707857884905477")) {
+  }
   if (message.startsWith("/kick")) {
     let matches = /\/kick (<.+>) (.+)/.exec(message)
     if (matches) {
@@ -112,13 +113,13 @@ bot.on("message", function(user, userID, channelID, message, event) {
               description: "**• Punido por:** <@" + userID + ">" + "\n**• Punição:** /kick" + "\n**• Membro punido**: " + member.username + "\n**• Motivo:** " + matches[2]
             },
           })
-        }
       }
     }
      })
 
      bot.on("message", function(user, userID, channelID, message, event) {
-      if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("&227809283239182336","&432707857884905477")) {
+      if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("227809283239182336","432707857884905477")) {
+      }
       if (message.startsWith("/ban")) {
         let matches = /\/ban (<.+>) (.+)/.exec(message)
         if (matches) {
@@ -146,5 +147,4 @@ bot.on("message", function(user, userID, channelID, message, event) {
               })
             }
           }
-        }
          })

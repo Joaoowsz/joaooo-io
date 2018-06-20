@@ -77,7 +77,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
     bot.sendMessage({
         to: '386940261797986307',
         embed: {
-            description: "Olá <@" + member.id +">, seja bem-vindo á Comunidade de Designer!" + "\nDesenvolvedor do Bot: https://twitter.com/Joaoowsz", 
+            description: "Olá <@" + member.id +">, seja bem-vindo a Comunidade de Designer!" + "\nDesenvolvedor do Bot: https://twitter.com/Joaoowsz", 
             color: 10181046,
              "icon_url": "https://cdn.discordapp.com/attachments/458045910383853569/458374239968296963/ee15ee2204940b811508b13eac92068d.jpg",
              "text": "Divirta-se! 😉",
@@ -148,3 +148,12 @@ bot.on("message", function(user, userID, channelID, message, event) {
             }
           }
          })
+
+         bot.on("message", function(user, userID, channelID, message, event) {
+          if(message.startsWith("server")) {
+            bot.sendMessage({
+              to: channelID,
+              message: servers.name,
+            })
+          }
+        })

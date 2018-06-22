@@ -149,11 +149,76 @@ bot.on("message", function(user, userID, channelID, message, event) {
           }
          })
 
-         bot.on("message", function(user, userID, channelID, message, event) {
-          if(message.startsWith("server")) {
-            bot.sendMessage({
-              to: channelID,
-              message: servers.name,
+        bot.on('message', (user, userID, channelID, message, event) => {
+          if (channelID == '439230089494790144') {
+            bot.addReaction({
+              channelID: '439230089494790144',
+              messageID: event.d.id,
+              reaction: "✅"
+            }, (errEmote) => {
+              console.log(JSON.stringify(errEmote))
             })
+            setTimeout(() => {
+              bot.addReaction({
+                channelID: '439230089494790144',
+                messageID: event.d.id,
+                reaction: "❌"
+              }, (errEmote) => {
+                console.log(JSON.stringify(errEmote))
+              })
+            }, 500)
           }
         })
+
+        bot.on('message', (user, userID, channelID, message, event) => {
+          if(message.startsWith("/avatar")) {
+          var avatar = "http://cdn.discordapp.com/avatars/" + event.d.mentions[0].id + "/" + bot.users[event.d.mentions[0].id].avatar;
+          bot.sendMessage({
+            to: channelID,
+            "embed": {
+              "color": 15105570,
+              "footer": {
+                "icon_url": avatar,
+                "text": null
+              },
+              "image": {
+                "url": avatar
+              },
+              "fields": [
+                {
+                  "name": ":frame_photo: " + user,
+                  "value": "Avatar de: **" + event.d.mentions[0].username + "**",
+                }
+              ]
+              
+              },
+          })
+        }
+      })
+
+      bot.on("message", function(user, userID, channelID, message, event) {
+        if(message.startsWith("/divulgar")) {
+            var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
+            bot.sendMessage({
+              to: "459748361906552833",
+              message: "everyone"
+            })
+            bot.sendMessage({
+                to: "459748361906552833",
+                    "embed": {
+                      "color": 1752220,
+                      "timestamp": new Date().toISOString(),
+                      "footer": {
+                        "icon_url": avatar,
+                        "text": "Atenciosamente, " + user
+                      },
+                      "fields": [
+                        {
+                          "name": "📢 Atenção: o membro " + user + " fez um novo trabalho! Veja-o logo abaixo e deixe seu feedback no bate-papo!",
+                          "value": message.slice(9)
+                        }
+                      ]
+                    }
+                })
+              }
+            })

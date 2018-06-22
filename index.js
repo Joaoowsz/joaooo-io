@@ -197,6 +197,8 @@ bot.on("message", function(user, userID, channelID, message, event) {
       })
 
       bot.on("message", function(user, userID, channelID, message, event) {
+        if (bot.servers[bot.channels[channelID].guild_id].members[userID].roles.includes("386938514647941120")) {
+        }
         if(message.startsWith("/divulgar")) {
             var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
             bot.sendMessage({

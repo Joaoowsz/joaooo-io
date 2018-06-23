@@ -110,7 +110,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
             to: "397355418214465536",
             embed: {
               color: 15158332,
-              description: "**• Punido por:** <@" + userID + ">" + "\n**• Punição:** /kick" + "\n**• Membro punido**: " + member.username + "\n**• Motivo:** " + matches[2]
+              description: "**• Punido por:** <@" + userID + ">" + "\n**• Punição:** Expulsão" + "\n**• Membro punido**: " + member.username + "\n**• Motivo:** " + matches[2]
             },
           })
       }
@@ -142,7 +142,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
                 to: "397355418214465536",
                 embed: {
                   color: 10038562,
-                  description: "**• Punido por:** <@" + userID + ">" + "\n**• Punição:** /ban" + "\n**• Membro punido**: " + member.username + "\n**• Motivo:** " + matches[2]
+                  description: "**• Punido por:** <@" + userID + ">" + "\n**• Punição:** Banimento" + "\n**• Membro punido**: " + member.username + "\n**• Motivo:** " + matches[2]
                 },
               })
             }
@@ -203,7 +203,7 @@ bot.on("message", function(user, userID, channelID, message, event) {
             var avatar = "http://cdn.discordapp.com/avatars/" + userID + "/" + bot.users[userID].avatar;
             bot.sendMessage({
               to: "459748361906552833",
-              message: "everyone"
+              message: "@here"
             })
             bot.sendMessage({
                 to: "459748361906552833",
